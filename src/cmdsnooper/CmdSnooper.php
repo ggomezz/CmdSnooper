@@ -20,7 +20,7 @@ class CmdSnooper extends PluginBase {
   		));
 	}
 	
-	public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{				
+	public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args) : bool{				
 		if(strtolower($cmd->getName()) == "snoop") {
 		 	if($sender instanceof Player) {
 				if($sender->hasPermission("snoop.command")) {
