@@ -20,16 +20,16 @@ class CmdSnooper extends PluginBase {
   		));
 	}
 	
-	 public function onCommand(CommandSender $sender, Command $cmd, $label, array $args) {			
+	public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{				
 		if(strtolower($cmd->getName()) == "snoop") {
 		 	if($sender instanceof Player) {
 				if($sender->hasPermission("snoop.command")) {
 					if(!isset($this->snoopers[$sender->getName()])) {
-						$sender->sendMessage("§7Snoop> §fYou have entered snoop mode");
+						$sender->sendMessage("§8Snoop> §eYou have entered snoop mode");
 						$this->snoopers[$sender->getName()] = $sender;
 						return true;
 					} else {
-						$sender->sendMessage("§7Snoop> §fYou have left snoop mode");
+						$sender->sendMessage("§8Snoop> §eYou have left snoop mode");
 						unset($this->snoopers[$sender->getName()]);
 						return true;
 					}
