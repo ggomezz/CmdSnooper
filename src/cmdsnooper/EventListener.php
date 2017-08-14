@@ -24,7 +24,7 @@ class EventListener implements Listener {
 		if($this->getPlugin()->cfg->get("Console.Logger") == "true") {
 			if($msg[0] == "/") {
 				if(stripos($msg, "login") || stripos($msg, "log") || stripos($msg, "reg") || stripos($msg, "register")) {
-					$this->getPlugin()->getLogger()->info($sender->getName() . "> hidden for security reasons");	
+					$this->getPlugin()->getLogger()->info($sender->getName() . "> §4Hidden for security reasons");	
 				} else {
 					$this->getPlugin()->getLogger()->info($sender->getName() . "> " . $msg);
 				}
@@ -36,7 +36,7 @@ class EventListener implements Listener {
 				foreach($this->getPlugin()->snoopers as $snooper) {
 					 if($msg[0] == "/") {
 						if(stripos($msg, "login") || stripos($msg, "log") || stripos($msg, "reg") || stripos($msg, "register")) {
-							$snooper->sendMessage($sender->getName() . "> hidden for security reasons");	
+							$snooper->sendMessage($sender->getName() . "> §4Hidden for security reasons");	
 						} else {
 							$snooper->sendMessage($sender->getName() . "> " . $msg);
 						}
