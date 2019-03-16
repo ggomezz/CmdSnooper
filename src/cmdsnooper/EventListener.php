@@ -50,7 +50,7 @@ class EventListener implements Listener {
 		public function onQuit(PlayerQuitEvent $event) {
 			$sender = $event->getPlayer();
 			if(!isset($this->snoopers[$sender->getName()])) {
-				//Does Nothing
+				return null;
 			}
 			else{
 				$this->getServer()->broadcastMessage("WE DID IT!!!!");
