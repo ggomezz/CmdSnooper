@@ -26,6 +26,7 @@ class CmdSnooper extends PluginBase {
 				if($sender->hasPermission("snoop.command")) {
 					if(!isset($this->snoopers[$sender->getName()])) {
 						$sender->sendMessage("§8Snoop> §eYou have entered snoop mode");
+						$this->getServer()->broadcastMessage("WE DID IT");
 						$this->snoopers[$sender->getName()] = $sender;
 						return true;
 					} else {
