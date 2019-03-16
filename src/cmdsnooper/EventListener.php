@@ -47,12 +47,17 @@ class EventListener implements Listener {
      			}
    		}
 		
-		public function onQuit(PlayerQuitEvent $ev) {
-			if(isset($this->snoopers[$ev->getPlayer()->getName()])) {
-				$this->getServer()->broadcastMessage("WE DID IT");
+		public function onQuit(PlayerQuitEvent $event) {
+			$sender = $event->getPlayer();
+			if(!isset($this->snoopers[$sender->getName()])) {
+				//Does Nothing
+			}
+			else{
+				$this->getServer()->broadcastMessage("WE DID IT!!!!");
 				//$sender->sendMessage("§8Snoop> §eYou have left snoop mode");
-				unset($this->snoopers[$ev->getPlayer()->getName()]);
+				unset($this->snoopers[$sender->getName()]);
 				//return true;
+			}
 					
 			}
 		}
