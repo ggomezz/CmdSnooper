@@ -4,8 +4,8 @@ namespace cmdsnooper;
 
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerCommandPreprocessEvent;
-use cmdsnooper\CmdSnooper;
 use pocketmine\event\player\PlayerQuitEvent;
+use cmdsnooper\CmdSnooper;
 
 class EventListener implements Listener {
 	public $plugin;
