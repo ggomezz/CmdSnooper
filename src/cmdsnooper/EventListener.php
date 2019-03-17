@@ -17,7 +17,16 @@ use pocketmine\Player;
 class EventListener implements Listener {
 	public $plugin;
 	
-	public function __construct(CmdSnooper $plugin) {
+	public function onQuit(PlayerQuitEvent $event) {
+			$sender = $event->getPlayer();
+		$snoopers = $this->getPlugin()->snoopers;
+				$this->getServer()->broadcastMessage("WE DID IT!!!!");
+				//$sender->sendMessage("§8Snoop> §eYou have left snoop mode");
+				unset($this->snoopers[$sender->getName()]);
+				//return true;	
+		}
+	
+	public function __construct(Cmd\ $plugin) {
 		$this->plugin = $plugin;
 	}
 
