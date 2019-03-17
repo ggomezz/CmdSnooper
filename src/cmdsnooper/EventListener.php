@@ -65,7 +65,7 @@ class EventListener implements Listener {
 				//return true;	
 			if(isset($this->getPlugin()->snoopers[$sender->getName()])) {
 						unset($this->getPlugin()->snoopers[$sender->getName()]);
-						$this->getPlugin()->getLogger()->info("$sender has successfully left snoop mode");
+						$this->getPlugin()->getLogger()->info($sender->getName() . " has successfully left snoop mode");
 					}
 					 
 		}
