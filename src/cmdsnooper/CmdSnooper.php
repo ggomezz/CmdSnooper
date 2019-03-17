@@ -36,7 +36,7 @@ class CmdSnooper extends PluginBase {
 				}
 			}
 		}
-		$this->getPlugin()->getLogger()->info("Command '/snoop' must be run as a player");
+		$this->getLogger()->info("Command '/snoop' must be run as a player");
 		return false;
 	}
  }
