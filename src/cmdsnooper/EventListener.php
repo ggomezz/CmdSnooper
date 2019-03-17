@@ -7,6 +7,12 @@ use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerCommandPreprocessEvent;
 use pocketmine\event\player\PlayerQuitEvent;
 use cmdsnooper\CmdSnooper;
+use pocketmine\plugin\PluginBase;
+use pocketmine\utils\Config;
+use pocketmine\command\Command;
+use pocketmine\command\CommandSender;
+use pocketmine\Player;
+
 
 class EventListener implements Listener {
 	public $plugin;
