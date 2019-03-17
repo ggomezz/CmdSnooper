@@ -4,4 +4,6 @@ branches:
 projects:
   CmdSnooper:
     path: ""
+    icon: "icon.jpg"
+
 ...
