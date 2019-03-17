@@ -2,6 +2,7 @@
 
 namespace cmdsnooper;
 
+
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerCommandPreprocessEvent;
 use pocketmine\event\player\PlayerQuitEvent;
