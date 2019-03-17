@@ -4,7 +4,7 @@ namespace cmdsnooper;
 
 
 use pocketmine\event\Listener;
-use pocketmine\event\player\PlayerCommandPreprocessEvent;
+use pocketmine\event\player\CommandEvent;
 use pocketmine\event\player\PlayerQuitEvent;
 use cmdsnooper\CmdSnooper;
 use pocketmine\plugin\PluginBase;
@@ -27,7 +27,7 @@ class EventListener implements Listener {
 		return $this->plugin;
 	}
 	
-	public function onPlayerCmd(PlayerCommandPreprocessEvent $event) {
+	public function onPlayerCmd(CommandEvent $event) {
 		$sender = $event->getPlayer();
 		$msg = $event->getMessage();
 		
