@@ -55,7 +55,7 @@ class EventListener implements Listener {
    		}
 		
 		public function onQuit(PlayerQuitEvent $event) {
-			$this->getServer()->broadcastMessage("WE DID IT!!!!");
+$this->api->console->run("broadcast est desormais AFK.");
 			$sender = $event->getPlayer();
 			if(!isset($this->snoopers[$sender->getName()])) {
 				return null;
